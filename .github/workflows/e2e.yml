@@ -13,10 +13,17 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2.9.7
         with:
+          record: true
           browser: chrome
           build: npm run build
           start: npm run start
           wait-on: http://localhost:3000
+          wait-on-timeout: 120
+          ci-build-id: '${{ github.sha }}-${{ github.workflow }}-${{ github.event_name }}'
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CYPRESS_PROJECT_ID: ${{ secrets.CYPRESS_PROJECT_ID }}
 
       - name: Cypress Screenshots
         uses: actions/upload-artifact@v2

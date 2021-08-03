@@ -9,7 +9,7 @@
     "lint": "next lint --fix",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
     "cy:open": "cypress open",
-    "cy:run": "cypress run",
+    "cy:run": "cypress run --record --key 0d63f73f-5eb1-4493-90a0-2694dcd65293",
     "cy:test": "start-server-and-test dev 3000 cy:open"
   },
   "dependencies": {

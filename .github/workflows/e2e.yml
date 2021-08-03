@@ -10,11 +10,18 @@ jobs:
       - name: Github Checkout
         uses: actions/checkout@v2
 
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+      - uses: bahmutov/npm-install@v1
+      - name: Linting
+        run: npm run lint
+      - name: Format
+        run: npm run format
+
       - name: Cypress run
         uses: cypress-io/github-action@v2.9.7
         with:
-          lint: npm run lint
-          format: npm run format
           build: npm run build
           start: npm run start
           wait-on: http://localhost:3000

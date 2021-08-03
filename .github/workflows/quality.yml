@@ -14,9 +14,5 @@ jobs:
           node-version: '14'
       - name: Install Dependencies
         run: npm install
-      - name: Linting
-        run: npm run lint
-      - name: Format
-        run: npm run format
-      - name: Tests
-        run: npm run test
+      - name: Linting and Formatting
+        run: npm run quality

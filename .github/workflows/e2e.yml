@@ -13,8 +13,8 @@ jobs:
 
       - name: Start APp
         run: |
-          NODE_ENV=test node run build
-          NODE_ENV=test node run start &
+          node run build
+          node run start &
 
       - name: Run E2E
         run: |

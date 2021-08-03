@@ -1,0 +1,21 @@
+name: E2E Tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  cypress-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Github Checkout
+        uses: actions/checkout@v2
+
+      - name: Start APp
+        run: |
+          NODE_ENV=test node run build
+          NODE_ENV=test node run start &
+
+      - name: Run E2E
+        run: |
+          npm run cy:open

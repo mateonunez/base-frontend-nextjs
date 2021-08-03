@@ -2,7 +2,6 @@ name: E2E Tests
 
 on:
   push:
-  pull_request:
 
 jobs:
   cypress-test:
@@ -11,11 +10,15 @@ jobs:
       - name: Github Checkout
         uses: actions/checkout@v2
 
-      - name: Start APp
-        run: |
-          npm run build
-          npm run start &
+      - name: Cypress run
+        uses: cypress-io/github-action@v2.9.7
+        with:
+          build: npm run build
+          start: npm run start
+          wait-on: http://localhost:3000
 
-      - name: Run E2E
-        run: |
-          npm run cy:open
+      - uses: actions/upload-artifact@v1
+        if: always() # / if: failure() <- more suitable for production
+        with:
+          name: cypress-videos
+          path: cypress/videos

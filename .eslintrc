@@ -10,6 +10,7 @@
     "plugin:react/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:prettier/recommended",
+    "plugin:cypress/recommended",
     "next",
     "next/core-web-vitals"
   ],
@@ -21,7 +22,8 @@
     "sourceType": "module"
   },
   "plugins": [
-    "react"
+    "react",
+    "cypress"
   ],
   "settings": {
     "react": {

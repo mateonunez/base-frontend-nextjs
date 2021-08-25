@@ -1,0 +1,12 @@
+.displayContent {
+  opacity: 0;
+  transition: 0.7s;
+}
+
+.fadeIn {
+  opacity: 1;
+}
+
+.fadeOut {
+  opacity: 0;
+}

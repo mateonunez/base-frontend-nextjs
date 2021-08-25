@@ -14,12 +14,14 @@
     "quality": "npm run lint && npm run format"
   },
   "dependencies": {
+    "@popperjs/core": "^2.9.3",
     "lottie-web": "^5.7.13",
     "next": "11.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
+    "autoprefixer": "^10.3.2",
     "cypress": "^8.1.0",
     "eslint": "^7.32.0",
     "eslint-config-next": "11.0.1",
@@ -29,8 +31,10 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "postcss": "^8.3.6",
     "prettier": "^2.3.2",
     "start-server-and-test": "^1.13.1",
+    "tailwindcss": "^2.2.7",
     "undefined": "^0.1.0"
   }
 }

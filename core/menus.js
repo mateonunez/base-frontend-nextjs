@@ -1,8 +1,8 @@
 const MainDropdownMenu = [
   {
-    key: 'dashboard',
-    name: 'Dashboard',
-    href: '/admin/dashboard',
+    key: 'home',
+    name: 'Home',
+    href: '/',
     icon: ''
   },
   {

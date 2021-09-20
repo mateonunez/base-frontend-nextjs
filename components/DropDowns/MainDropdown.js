@@ -34,7 +34,7 @@ export default function MainDropdown() {
           e.preventDefault();
           isPopoverVisible ? closeDropdownPopover() : openDropdownPopover();
         }}>
-        Dropdown
+        Menù
       </a>
       <div
         ref={popoverDropdownRef}
